@@ -10,11 +10,25 @@ formLogin.className = 'login-form';
 
 // Creación de los campos del formulario
 
+
+//Mensaje de alerta usuario
+
+let alertUser = document.createElement('p');
+alertUser.className = 'alerta-usuario';
+
+
+
 // Campo del usuario
 const userInput = document.createElement('input');
 userInput.type = 'text';
 userInput.placeholder = 'Nombre del vecino/a';
 userInput.required = true;
+
+
+// Mensaje de alerta de contraseña
+
+let alertPass = document.createElement('p');
+alertPass.className = 'alerta-pass';
 
 // Campo de la contraseña
 const passInput = document.createElement('input');
@@ -40,15 +54,17 @@ formLogin.addEventListener('submit', function(event) {
     const contrasena = passInput.value.trim();
     const onlyText = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
 
+    
+
     if (!onlyText.test(usuario)) {
 
-        alert('El campo del nombre solo puede contener letras y espacios');
+        alertUser.innerText = 'El campo del nombre solo puede contener letras y espacios';
         return;
     }
 
     else if (contrasena.length !==6) {
 
-        alert('El campo de la contraseña debe de contener al menos 6 dígitos');
+        alertPass.innerText ='El campo de la contraseña debe de contener 6 dígitos';
         return;
 
     } else {
@@ -64,6 +80,7 @@ formLogin.addEventListener('submit', function(event) {
 
 // Añadir los elementos al formulario
 
+
 formLogin.appendChild(userInput);
 formLogin.appendChild(passInput);
 formLogin.appendChild(submitBtn);
@@ -71,7 +88,8 @@ formLogin.appendChild(submitBtn);
 //Añadir formulario al contenedor
 
 container.appendChild(formLogin);
-
+container.appendChild(alertUser);
+container.appendChild(alertPass);
 
 //---------------------------------------------
 

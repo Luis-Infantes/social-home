@@ -36,6 +36,15 @@ main {
 }
 
 
+.alerta-usuario,
+.alerta-pass {
+
+  font-size: 10px;
+  color: brown;
+
+}
+
+
 .login-form input,
 .login-form button {
 
