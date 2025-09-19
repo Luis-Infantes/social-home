@@ -25,7 +25,7 @@ main {
 }
 
 
-/*-----------PERFIL----------*/
+/*-----------Estilo de la página perfil----------*/
 
 
 
@@ -39,6 +39,8 @@ main {
   justify-content: center;
   align-items: center;
 }
+
+/*--------------Estilos de la sección datos personales-----------------*/
 
 
 #user-dates {
@@ -106,16 +108,8 @@ main {
 
 /*---------------------------------------------------------*/
 
-#user-calendary {
+/*-------------Estilos de la sección mensajes--------------*/
 
-  border: 2px, solid, #a3712a;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  text-align: center;
-  width: 20%;
-
-}
 
 
 #user-msn {
@@ -154,6 +148,42 @@ main {
 
 }
 
+/*---------------------------------------------------------*/
+
+/*------Estilos de la sección calendario--------------------*/
+
+
+.calendar-tittle {
+
+  color:#e6b774;
+  margin-bottom: 8px;
+
+}
+
+#user-calendar {
+
+  border: 2px, solid, #a3712a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 20%;
+
+}
+
+
+#user-calendar th,
+#user-calendar td {
+
+  border: 1px, solid, #e6b774;
+  padding: 5px;
+  font-size: 8px;
+}
+
+
+
+
+/*---------------------Estilos del bloque 2------------------------------------*/
 
 .bloq-2 {
 
