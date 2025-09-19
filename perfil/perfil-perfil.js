@@ -44,6 +44,46 @@ personalDates.content('Trabajo', userWork);
 personalDates.content('Frase', userNote);
 
 
+// ------------Funcion para contenedor de mensajes -------//
 
 
+
+
+ function msnGeneral (msnName, msnTittle, msnGeneral) {
+
+        const msnType = document.createElement('h5');
+        const msnText = document.createElement('p');
+
+        msnType.textContent = `${msnName}`;
+        msnText.textContent = ` ${msnTittle}`;
+
+        
+        msnType.className = 'msn-names';
+        msnText.className = 'msn-text';
+
+        msnGeneral.appendChild(msnType);
+        msnGeneral.appendChild(msnText);
+
+}
+
+
+const userMsn = document.getElementById('user-msn');
+
+const presidentName = 'Enrique García';
+let presidenTittle = 'Mensajes del presidente de la comunidad';
+
+
+const neighName = 'Vecinos';
+let neighTittle = 'Mensajes de tus vecinos de contacto';
+
+
+const neighRequestName = 'Solicitudes';
+let neighRequestTittle = 'Peticiones de contacto de otros vecinos';
+
+msnGeneral(presidentName,presidenTittle,userMsn);
+msnGeneral(neighName,neighTittle,userMsn);
+msnGeneral(neighRequestName,neighRequestTittle,userMsn);
+
+
+//----------------------------------------------------
 

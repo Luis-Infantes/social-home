@@ -113,7 +113,7 @@ main {
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
   text-align: center;
-  width: 40%;
+  width: 20%;
 
 }
 
@@ -126,8 +126,31 @@ main {
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
   text-align: center;
-  width: 20%;
+  width: 50%;
   
+
+}
+
+
+.msn-names {
+
+  color:#a3712a;
+  border: 2px, solid, #a3712a;
+  cursor: pointer;
+}
+
+.msn-names:hover {
+
+  background: #a3712a;
+  color: #e6b774;
+}
+
+.msn-text {
+
+  font-size: 10px;
+  font-style: italic;
+  margin-top: -20px;
+
 
 }
 
