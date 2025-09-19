@@ -26,11 +26,12 @@ const personalDates = {
     }
 };
 
-const userName = localStorage.getItem('usuario');
-const property = 'Tercero D';
-const email = 'Luis@contact.es';
-const tlfNumber = '555 55 55 55';
-const userWork = 'Activo';
+//const userName = localStorage.getItem('usuario'); pendiente de ""ELIMINAR""
+const userName = 'Santiago Torres';
+const property = '1ºA';
+const email = 'SantiThor@contact.es';
+const tlfNumber = '111 11 11 11';
+const userWork = 'Parado';
 const userNote = 'Me encantan las juntas de vecinos. No me pierdo ninguna';
 
 
@@ -40,8 +41,8 @@ personalDates.content('Nombre', userName);
 personalDates.content('Piso', property);
 personalDates.content('email', email);
 personalDates.content('Tlf', tlfNumber);
-personalDates.content('Trabajo', userWork);
-personalDates.content('Frase', userNote);
+personalDates.content('Situación laboral', userWork);
+personalDates.content('Notas', userNote);
 
 
 // ------------Funcion para contenedor de mensajes -------//

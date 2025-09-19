@@ -26,12 +26,12 @@ const personalDates = {
     }
 };
 
-const userName = localStorage.getItem('usuario');
-const property = 'Tercero D';
-const email = 'Luis@contact.es';
-const tlfNumber = '555 55 55 55';
+const userName = 'Marisa Pilar';
+const property = '2ºA';
+const email = 'MariPi@contact.es';
+const tlfNumber = '222 22 22 22';
 const userWork = 'Activo';
-const userNote = 'Me encantan las juntas de vecinos. No me pierdo ninguna';
+const userNote = 'Odio las reuniones. Todos los meses son gastos';
 
 
 
@@ -40,8 +40,8 @@ personalDates.content('Nombre', userName);
 personalDates.content('Piso', property);
 personalDates.content('email', email);
 personalDates.content('Tlf', tlfNumber);
-personalDates.content('Trabajo', userWork);
-personalDates.content('Frase', userNote);
+personalDates.content('Situación laboral', userWork);
+personalDates.content('Notas', userNote);
 
 
 // ------------Funcion para contenedor de mensajes -------//
@@ -170,8 +170,8 @@ function createCalendar (mouth, year, userCalendar) {
             calendarDate.getMonth() === today.getMonth() &&
             calendarDate.getFullYear() === today.getFullYear()
         ) {
-            cell.style.backgroundColor = '#e6b774';
-            cell.style.color = '#a3712a'
+            cell.style.backgroundColor = '#87f0e2';
+            cell.style.color = '#064b2e'
             cell.style.fontWeight = 'bold';
             cell.style.borderRadius = '12px';
         }

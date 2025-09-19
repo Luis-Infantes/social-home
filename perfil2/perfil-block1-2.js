@@ -26,12 +26,12 @@ const personalDates = {
     }
 };
 
-const userName = localStorage.getItem('usuario');
-const property = 'Tercero D';
-const email = 'Luis@contact.es';
+const userName = 'Enrique Martín';
+const property = '5ªA';
+const email = 'Enrique@admin.es';
 const tlfNumber = '555 55 55 55';
-const userWork = 'Activo';
-const userNote = 'Me encantan las juntas de vecinos. No me pierdo ninguna';
+const userWork = 'Jubilado';
+const userNote = 'Soy el presidente de la comunidad. Escríbeme para cualquier consulta';
 
 
 
@@ -40,8 +40,8 @@ personalDates.content('Nombre', userName);
 personalDates.content('Piso', property);
 personalDates.content('email', email);
 personalDates.content('Tlf', tlfNumber);
-personalDates.content('Trabajo', userWork);
-personalDates.content('Frase', userNote);
+personalDates.content('Situación laboral', userWork);
+personalDates.content('Notas', userNote);
 
 
 // ------------Funcion para contenedor de mensajes -------//
@@ -69,8 +69,8 @@ personalDates.content('Frase', userNote);
 
 const userMsn = document.getElementById('user-msn');
 
-const presidentName = 'Enrique García';
-let presidenTittle = 'Mensajes del presidente de la comunidad';
+const presidentName = 'Modo editor';
+let presidenTittle = 'Editar la aplicación de la comunidad';
 
 
 const neighName = 'Vecinos';
@@ -170,8 +170,8 @@ function createCalendar (mouth, year, userCalendar) {
             calendarDate.getMonth() === today.getMonth() &&
             calendarDate.getFullYear() === today.getFullYear()
         ) {
-            cell.style.backgroundColor = '#e6b774';
-            cell.style.color = '#a3712a'
+            cell.style.backgroundColor = '#91abd1';
+            cell.style.color = '#0a3b64'
             cell.style.fontWeight = 'bold';
             cell.style.borderRadius = '12px';
         }
