@@ -1,0 +1,160 @@
+/*---Estilos generales---*/
+
+body {
+
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to left, #a3712a, #e6b774); /* Horizontal */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+    
+}
+
+
+.title-comunity {
+
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: -80px;
+  position: absolute;
+  
+  
+  
+}
+
+
+.Secondtitle-com {
+
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: -30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  margin-bottom: 40px;
+  margin-top: -50px;
+  position: absolute;
+
+}
+
+
+
+
+
+
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#comunity {
+  
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  border: 2px, solid, #a3712a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 50%;
+  
+  
+}
+
+#comunity img {
+
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  
+}
+
+
+
+#perfil1 img,
+#perfil2 img,
+#perfil3 img,
+#perfil4 img,
+#perfil5 img,
+#perfil6 img     {
+
+  
+  background: #a3712a;
+  cursor: pointer;
+ 
+  
+}
+
+
+#perfil1 p {
+
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: -3px;
+  margin-left: 18px;
+}
+
+#perfil2 p {
+
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: -3px;
+  margin-left: 18px;
+}
+
+
+#perfil3 p {
+
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: -3px;
+  margin-left: 18px;
+}
+
+
+#perfil4 p {
+
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: -3px;
+  margin-left: 18px;
+}
+
+
+
+#perfil5 p {
+
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: -3px;
+  margin-left: 18px;
+}
+
+#perfil6 p {
+
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: -3px;
+  margin-left: 18px;
+}
+
+
