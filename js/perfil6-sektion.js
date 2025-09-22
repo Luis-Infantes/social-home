@@ -214,3 +214,157 @@ const todayCalendar = new Date();
 //const perfilCalendar = document.getElementById('user-calendar');
 
 createCalendar(todayCalendar.getMonth(), todayCalendar.getFullYear(), 'user-calendar');
+
+
+
+
+
+
+
+//----Chat de la comunidad--------
+
+// Funcionalidad para enviar mensajes de texto en el chat
+
+// Definimos una constante con el nombre del usuario
+const actualUser = 'Amparo';
+
+// Cargamos todos los mensajes escritos al inciar
+document.addEventListener("DOMContentLoaded", cargarMensajes);
+
+// Enviar un mensaje
+
+document.getElementById('chat-form').addEventListener('submit', function (e) {
+
+    e.preventDefault();
+    enviarMensaje();
+});
+
+
+
+// Función para cargar mensajes añadidos
+
+function cargarMensajes() {
+
+    const messages = JSON.parse(localStorage.getItem('mensajesChat')) || [];
+    const content = document.getElementById('chat-message');
+    content.innerHTML = '';
+
+    messages.forEach((msg, index) => {
+
+        const div = document.createElement('div');
+        div.className = 'message';
+        div.textContent = `${msg.usuario}: ${msg.texto}`;
+
+        // Botón para eliminar mensajes 
+        if (msg.usuario === actualUser) {
+
+            const btnDelete = document.createElement('button');
+            btnDelete.textContent = 'Eliminar';
+            btnDelete.className = 'eliminar-btn';
+            btnDelete.onclick = function () {
+                eliminarMensaje(index);
+            };
+            
+            div.appendChild(btnDelete);
+
+        // Botón para editar mensajes
+        
+            const btnEdit = document.createElement('button');
+            btnEdit.textContent = 'Editar';
+            btnEdit.className = 'editar-btn';
+            btnEdit.onclick = function () {
+
+                editarMensaje(index, msg.texto)
+            };
+
+            div.appendChild(btnEdit);
+        }
+
+        content.appendChild(div);
+    });
+
+    // Bajar el scroll hasta el último mensaje
+
+    content.scrollTop = content.scrollHeight;
+}
+
+
+
+// Función para editar mensajes
+
+function editarMensaje(index, textoActual) {
+    const content = document.getElementById('chat-message');
+    const mensajeDiv = content.children[index];
+
+    // Reemplaza el texto por un input
+    mensajeDiv.innerHTML = '';
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.value = textoActual;
+    mensajeDiv.appendChild(input);
+
+    const btnGuardar = document.createElement('button');
+    btnGuardar.textContent = 'Guardar';
+    btnGuardar.onclick = function() {
+        guardarEdicion(index, input.value);
+    };
+    mensajeDiv.appendChild(btnGuardar);
+
+    const btnCancelar = document.createElement('button');
+    btnCancelar.textContent = 'Cancelar';
+    btnCancelar.onclick = function() {
+        cargarMensajes(); // Vuelve a mostrar los mensajes sin editar
+    };
+    mensajeDiv.appendChild(btnCancelar);
+}
+
+
+// Función para guardar los mensajes
+
+function guardarEdicion(index, nuevoTexto) {
+    if (!nuevoTexto.trim()) return;
+    const messages = JSON.parse(localStorage.getItem('mensajesChat')) || [];
+    messages[index].texto = nuevoTexto.trim();
+    localStorage.setItem('mensajesChat', JSON.stringify(messages));
+    cargarMensajes();
+}
+
+
+
+
+
+// Funcion para eliminar mensajes
+
+function eliminarMensaje(index) {
+
+    const messages = JSON.parse(localStorage.getItem('mensajesChat'));
+    messages.splice(index,1); // Elimina el mensaje de la posición indicada
+    localStorage.setItem('mensajesChat', JSON.stringify(messages));
+    cargarMensajes();
+}
+
+
+
+// Funcion para enviar mensajes
+
+
+function enviarMensaje () {
+
+    const input = document.getElementById('chat-input');
+    const text = input.value.trim();
+    if (!text) return;
+
+
+    const messages = JSON.parse(localStorage.getItem('mensajesChat')) || [];
+    messages.push({
+
+        usuario: actualUser,
+        texto: text,
+        fecha: new Date().toISOString()
+    });
+
+    localStorage.setItem('mensajesChat', JSON.stringify(messages));
+    input.value = '';
+    cargarMensajes();
+}

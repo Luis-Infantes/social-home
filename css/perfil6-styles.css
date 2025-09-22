@@ -1,255 +1,191 @@
 /*---Estilos generales---*/
 
+
 body {
 
   margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to left, #690929, #eca2bb); /* Horizontal */
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to left, #690929, #eca2bb); 
+  color: #000;
+}
 
-    
+/*----Contenedor principal-----*/
+
+
+
+main#perfil {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 
-main {
-  width: 80%;
+
+/* Sección izquierda */
+main#perfil > section:first-of-type {
+  flex: 1 1 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 2px, solid, #690929;
-}
-
-
-/*-----------Estilo de la página perfil----------*/
-
-
-
-.bloq-1 {
-
-  
-  display: flex;
   gap: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  justify-content: center;
-  align-items: center;
 }
 
-/*--------------Estilos de la sección datos personales-----------------*/
 
 
-#user-dates {
-
-  
-  border: 2px, solid, #690929;
+/* Sección derecha (chat) */
+main#perfil > section:last-of-type {
+  flex: 2 1 400px;
+  border: 2px solid #eca2bb;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  width: 40%;
-
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
+
+
+
+/* Tarjeta de datos personales */
+#user-dates {
+  border: 2px solid #eca2bb;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+
 
 #user-dates img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
 
-  
-  border: 2px, solid, #690929;
-  float: left;
-  width: 30%;
-  margin-right: 5px;
-  
-  
-  
+#user-info {
+  margin-bottom: 10px;
 }
 
 
-#user-info p {
 
-  text-align: left;
-  display: block;
-  font-style: italic;
-  font-size: 0.8em;
-  margin-top: -5px;
-  
-  
-}
-
-.user-email {
-
-  color: #690929;
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-.perfil5-buttons {
-
-
- 
+/* Botones */
+.perfil6-buttons {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
 }
 
-.user-editar {
-
-  display: flex;
-  border: 2px, solid, #690929;
-  background: #eca2bb;
-  color: #690929;
-  font-family: 'Segoe UI', sans-serif;
-  font-weight: bold;
+.perfil6-buttons button {
+  padding: 8px 12px;
+  background-color: #690929;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-
-
-}
-
-.user-editar:hover {
-
-  background: #690929;
-  color: #eca2bb;
-
-}
-
-#return {
-
-  
-  border: 2px, solid, #690929;
-  background: #eca2bb;
-  color: #690929;
-  font-family: 'Segoe UI', sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-
-
-}
-
-#return:hover {
-
-  background: #690929;
-  color: #eca2bb;
-
 }
 
 
-/*---------------------------------------------------------*/
+.perfil6-buttons button:hover {
+  background-color: #690929;
+}
 
-/*-------------Estilos de la sección mensajes--------------*/
 
 
-
-#user-msn {
-
-  
-  border: 2px, solid, #690929;
+/* Tarjetas adicionales */
+#user-msn,
+#user-calendar,
+#user-contacts {
+  border: 2px solid #eca2bb;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  text-align: center;
-  width: 40%;
-  
-
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 
-.msn-names {
-
-  color:#690929;
-  border: 2px, solid, #690929;
-  cursor: pointer;
-}
-
-.msn-names:hover {
-
-  background: #690929;
-  color: #eca2bb;
-}
-
-.msn-text {
-
-  font-size: 10px;
-  font-style: italic;
-  margin-top: -20px;
-
-
-}
-
-/*---------------------------------------------------------*/
-
-/*------Estilos de la sección calendario--------------------*/
-
-
-.calendar-tittle {
-
-  color:#eca2bb;
-  margin-bottom: 8px;
-
-}
-
-#user-calendar {
-
-  border: 2px, solid, #690929;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  text-align: center;
-  width: 20%;
-
-}
-
-
-#user-calendar th,
-#user-calendar td {
-
-  border: 1px, solid, #eca2bb;
-  padding: 5px;
-  font-size: 8px;
-}
-
-
-
-
-/*---------------------Estilos del bloque 2------------------------------------*/
-
-.bloq-2 {
-
+#calendar-contact-wrapper {
   display: flex;
   gap: 20px;
-  margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
-#user-chat {
-
-  border: 2px, solid, #690929;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  text-align: center;
-  width: 40%;
-  
-
-}
-
+/* Ajustamos los dos contenedores para que compartan el espacio */
+#user-calendar,
 #user-contacts {
-
-  border: 2px, solid, #690929;
+  flex: 1 1 45%;
+  border: 2px solid #eca2bb;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  text-align: center;
-  width: 20%;
-  
-
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-sizing: border-box;
 }
 
 
 
+
+/* Chat */
+#user-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-tittle {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+
+
+#chat-message {
+  height: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+
+
+#chat-form {
+  display: flex;
+  gap: 10px;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+
+
+#chat-form button {
+  padding: 8px 12px;
+  background-color: #690929;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+#chat-form button:hover {
+  background-color: #690929;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  main#perfil {
+    flex-direction: column;
+  }
+
+  main#perfil > section {
+    width: 100%;
+  }
+}
 
 
 
