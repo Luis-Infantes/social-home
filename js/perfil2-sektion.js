@@ -220,6 +220,33 @@ const todayCalendar = new Date();
 
 createCalendar(todayCalendar.getMonth(), todayCalendar.getFullYear(), 'user-calendar');
 
+//----Tablon de anuncios--------
+
+const contactTittle = document.getElementById('user-contacts');
+contactTittle.textContent = 'Tablón de anuncios';
+contactTittle.className = 'contact-tittle';
+
+function contactsCard (nameContact, textContact) {
+
+    let contactCard = document.createElement('p');
+    contactCard.className = 'contact-card';
+    contactCard.textContent = `${nameContact}: ${textContact}`;
+
+    contactTittle.appendChild(contactCard);
+
+}
+
+contactsCard('Manolo Electricista', '91 333 33 33');
+contactsCard('Casimiro Fontanero', '91 222 22 22');
+contactsCard('Elvira ascensores', '91 444 44 44');
+contactsCard('Pintores Portillo', '91 111 33 33');
+
+
+
+
+
+//--------------------------------------------------------------------------------------------
+
 
 //----Chat de la comunidad--------
 

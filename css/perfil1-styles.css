@@ -307,6 +307,23 @@ main#perfil > section:last-of-type {
 }
 
 
+/*Estilos para el tablón de anuncios*/
+
+.contact-tittle {
+
+  font-weight: bold;
+  color: #5f5f03;
+  text-align: center;
+}
+
+.contact-card {
+
+  font-size: 12px;
+}
+
+
+
+/*-------------------------------------------------*/
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
