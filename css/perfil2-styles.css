@@ -137,7 +137,78 @@ main#perfil > section:last-of-type {
   box-sizing: border-box;
 }
 
+/*Estilos para el contenedor de mensajes*/
 
+.msn-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: -10px;
+  cursor: pointer;
+  
+}
+
+.msn-img:hover {
+
+  opacity: 50%;
+}
+
+.msn-names {
+
+  color: #064b2e;
+  font-weight: bold;
+  margin-top: -10px;
+  
+
+}
+
+.msn-text {
+
+  color: #064b2e;
+  font-weight: bold;
+  border: 1px solid #064b2e;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+
+}
+
+.msn-text:hover {
+
+  color: #87f0e2;
+  background-color: #064b2e;
+
+}
+
+.follower-tittle {
+
+  color: #064b2e;
+  font-weight: bold;
+
+
+}
+
+
+.follower-img {
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: -10px;
+  cursor: pointer;
+  float: left;
+  padding: 5px;
+  
+
+}
+
+.follower-img:hover {
+
+  opacity: 50%;
+}
+
+/*---------------------------------------------------*/
 
 
 /* Chat */

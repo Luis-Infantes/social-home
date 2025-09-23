@@ -55,46 +55,110 @@ const returnLogin = document.getElementById('return-login').onclick = function (
 
 // ------------Funcion para contenedor de mensajes -------//
 
-
-
-
- function msnGeneral (msnName, msnTittle, msnGeneral) {
-
-        const msnType = document.createElement('h5');
-        const msnText = document.createElement('p');
-
-        msnType.textContent = `${msnName}`;
-        msnText.textContent = ` ${msnTittle}`;
-
-        
-        msnType.className = 'msn-names';
-        msnText.className = 'msn-text';
-
-        msnGeneral.appendChild(msnType);
-        msnGeneral.appendChild(msnText);
-
-}
-
+//-------------Mensajes privados del presidente-----------//
 
 const userMsn = document.getElementById('user-msn');
 
-const presidentName = 'Modo editor';
-let presidenTittle = 'Editar la aplicación de la comunidad';
+function msnGeneral(msnName, msnTittle) {
+    const msnContainer = document.createElement('div');
+    msnContainer.className = 'msn-container';
+
+    //Nombre
+    const msnType = document.createElement('h2');
+    msnType.textContent = msnName;
+    msnType.className = 'msn-names';
+    msnContainer.appendChild(msnType);
+
+    
+
+    //Título
+    
+    const msnText = document.createElement('p');
+    msnText.textContent = msnTittle;
+    msnText.className = 'msn-text';
+
+    
+    msnContainer.appendChild(msnText);
+
+    userMsn.appendChild(msnContainer);
+}
 
 
-const neighName = 'Vecinos';
-let neighTittle = 'Mensajes de tus vecinos de contacto';
 
 
-const neighRequestName = 'Solicitudes';
-let neighRequestTittle = 'Peticiones de contacto de otros vecinos';
 
-msnGeneral(presidentName,presidenTittle,userMsn);
-msnGeneral(neighName,neighTittle,userMsn);
-msnGeneral(neighRequestName,neighRequestTittle,userMsn);
+const presidentName = 'Mensajes privados';
+let presidenTittle = 'Acceso mensajes enviados';
+
+let otherName = '';
+let otherTittle = 'Acceso mensajes de vecinos';
 
 
-//----------------------------------------------------
+msnGeneral(presidentName,presidenTittle);
+msnGeneral( otherName,otherTittle);
+
+//--------------------------------------------------------------------------
+
+
+//----Función para followers----------------------
+
+function followers(followerImg = null, followerLink = null, followersTittle) {
+
+    const followersContainer = document.createElement('div');
+    followersContainer.className = 'followers-container';
+
+    // Definir el título de la sección followers
+    const followerTittle = document.createElement('h2');
+    followerTittle.textContent = followersTittle;
+    followerTittle.className = 'follower-tittle';
+    followersContainer.appendChild(followerTittle);
+
+    if (followerImg) {
+        const followerIm = document.createElement('img');
+        followerIm.src = followerImg;
+        followerIm.className = 'follower-img';
+
+        if (followerLink) {
+            const followerli = document.createElement('a');
+            followerli.href = followerLink;
+            followerli.appendChild(followerIm);
+            followersContainer.appendChild(followerli);
+        } else {
+            followersContainer.appendChild(followerIm);
+        }
+    }
+
+    userMsn.appendChild(followersContainer);
+
+}
+
+const tittleFolllower = 'Seguidores';
+let followersImg1 = '';
+let followersLink1 = '';
+
+let followersImg2 = 'img/imagen3.png';
+let followersLink2 = 'perfil3.html';
+
+let followersImg3 = 'img/image2.png';
+let followersLink3 = 'perfil2.html';
+
+let followersImg4 = 'img/image4.png';
+let followersLink4 = 'perfil4.html';
+
+let followersImg5 = 'img/image1.png';
+let followersLink5 = 'perfil1.html';
+
+let followersImg6 = 'img/image6.png';
+let followersLink6 = 'perfil6.html';
+
+followers(followersImg1,followersLink1, tittleFolllower);
+followers(followersImg2,followersLink2);
+followers(followersImg3,followersLink3);
+followers(followersImg4,followersLink4);
+followers(followersImg5,followersLink5);
+followers(followersImg6,followersLink6);
+
+//------------------------------------------------------------------------------------------
 
 
 
