@@ -262,10 +262,123 @@ function cargarMensajes() {
         div.className = 'message';
         div.textContent = `${msg.usuario}: ${msg.texto}`;
 
+                //Cambio del color de los mensajes del chat segun el usuario que escriba
+
         if (msg.usuario === actualUser) {
             div.classList.add('mensaje-usuario');
-        } else {
-            div.classList.add('mensaje-vecino');
+        } 
+
+
+        if (msg.usuario === 'Santiago') {
+
+            div.classList.add('mensaje-Santiago');
+
+
+            // Botón de like solo para mensajes de otros usuarios
+            const likeHeart = document.createElement('span');
+            likeHeart.className = 'like-btn';
+            likeHeart.textContent = likes[index] ? '❤️' : '🤍';
+
+            likeHeart.addEventListener("click", function () {
+                // Cambia el estado visual
+                if (likeHeart.textContent === "🤍") {
+                    likeHeart.textContent = "❤️";
+                    likes[index] = true;
+                } else {
+                    likeHeart.textContent = "🤍";
+                    delete likes[index];
+                }
+                // Guarda en localStorage
+                localStorage.setItem('likesChat', JSON.stringify(likes));
+            });
+
+            div.appendChild(likeHeart);
+        }
+
+        if (msg.usuario === 'Marisa') {
+
+            div.classList.add('mensaje-Marisa');
+
+
+            // Botón de like solo para mensajes de otros usuarios
+            const likeHeart = document.createElement('span');
+            likeHeart.className = 'like-btn';
+            likeHeart.textContent = likes[index] ? '❤️' : '🤍';
+
+            likeHeart.addEventListener("click", function () {
+                // Cambia el estado visual
+                if (likeHeart.textContent === "🤍") {
+                    likeHeart.textContent = "❤️";
+                    likes[index] = true;
+                } else {
+                    likeHeart.textContent = "🤍";
+                    delete likes[index];
+                }
+                // Guarda en localStorage
+                localStorage.setItem('likesChat', JSON.stringify(likes));
+            });
+
+            div.appendChild(likeHeart);
+        }
+
+
+        if (msg.usuario === 'Marla') {
+
+            div.classList.add('mensaje-Marla');
+
+
+            // Botón de like solo para mensajes de otros usuarios
+            const likeHeart = document.createElement('span');
+            likeHeart.className = 'like-btn';
+            likeHeart.textContent = likes[index] ? '❤️' : '🤍';
+
+            likeHeart.addEventListener("click", function () {
+                // Cambia el estado visual
+                if (likeHeart.textContent === "🤍") {
+                    likeHeart.textContent = "❤️";
+                    likes[index] = true;
+                } else {
+                    likeHeart.textContent = "🤍";
+                    delete likes[index];
+                }
+                // Guarda en localStorage
+                localStorage.setItem('likesChat', JSON.stringify(likes));
+            });
+
+            div.appendChild(likeHeart);
+        }
+
+        if (msg.usuario === 'Antonio') {
+
+            div.classList.add('mensaje-Antonio');
+
+
+            // Botón de like solo para mensajes de otros usuarios
+            const likeHeart = document.createElement('span');
+            likeHeart.className = 'like-btn';
+            likeHeart.textContent = likes[index] ? '❤️' : '🤍';
+
+            likeHeart.addEventListener("click", function () {
+                // Cambia el estado visual
+                if (likeHeart.textContent === "🤍") {
+                    likeHeart.textContent = "❤️";
+                    likes[index] = true;
+                } else {
+                    likeHeart.textContent = "🤍";
+                    delete likes[index];
+                }
+                // Guarda en localStorage
+                localStorage.setItem('likesChat', JSON.stringify(likes));
+            });
+
+            div.appendChild(likeHeart);
+        }
+        
+
+         if (msg.usuario === 'Enrique') {
+
+            div.classList.add('mensaje-Enrique');
+
 
             // Botón de like solo para mensajes de otros usuarios
             const likeHeart = document.createElement('span');

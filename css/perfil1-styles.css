@@ -160,20 +160,61 @@ main#perfil > section:last-of-type {
 
 
 
+/*Estilos para el cambio de color de los mensajes del chat dependiendo del usuario que escriba*/
+
 .mensaje-usuario {
   
   font-weight: bold;
-  color: #747204;
+  
+  color: #5f5f03;
+  background-color: #e1e999;
   align-self: flex-end;
   margin-left: auto;
 }
 
-.mensaje-vecino {
+
+.mensaje-Marisa {
   
-  color: #000;
-  align-self: flex-start;
-  margin-right: auto;
+  font-weight: bold;
+  color: #064b2e;
+  align-self: flex-end;
+  margin-left: auto;
 }
+
+.mensaje-Marla {
+  
+  font-weight: bold;
+  color: #707072;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.mensaje-Antonio {
+  
+  font-weight: bold;
+  color: #5e035e;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.mensaje-Enrique {
+  
+  font-weight: bold;
+  color: #0a3b64;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+
+.mensaje-Amparo {
+  
+  font-weight: bold;
+  color: #690929;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+/*-------------------------------------------------------*/
 
 
 

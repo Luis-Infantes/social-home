@@ -158,20 +158,60 @@ main#perfil > section:last-of-type {
   transform: scale(1.2);
 }
 
+/*Estilos para el cambio de color de los mensajes del chat dependiendo del usuario que escriba*/
+
 .mensaje-usuario {
   
   font-weight: bold;
   color: #0a3b64;
+  background-color: #91abd1;
   align-self: flex-end;
   margin-left: auto;
 }
 
-.mensaje-vecino {
+
+.mensaje-Santiago {
   
-  color: #000;
-  align-self: flex-start;
-  margin-right: auto;
+  font-weight: bold;
+  color: #5f5f03;
+  align-self: flex-end;
+  margin-left: auto;
 }
+
+.mensaje-Marisa {
+  
+  font-weight: bold;
+  color: #064b2e;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.mensaje-Marla {
+  
+  font-weight: bold;
+  color: #707072;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.mensaje-Antonio {
+  
+  font-weight: bold;
+  color: #5e035e;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+
+.mensaje-Amparo {
+  
+  font-weight: bold;
+  color: #690929;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+/*-------------------------------------------------------*/
 
 #chat-form {
   display: flex;
