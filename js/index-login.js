@@ -54,26 +54,81 @@ formLogin.addEventListener('submit', function(event) {
     const contrasena = passInput.value.trim();
     const onlyText = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
 
-    
+    //Acceso a los perfiles
 
-    if (!onlyText.test(usuario)) {
+    if ((!onlyText.test(usuario))) {
 
         alertUser.innerText = 'El campo del nombre solo puede contener letras y espacios';
         return;
     }
 
-    else if (contrasena.length !==6) {
+    if (contrasena.length !==6) {
 
         alertPass.innerText ='El campo de la contraseña debe de contener 6 dígitos';
         return;
 
+    }
+    
+    if (usuario === 'Santiago' && contrasena === '123456') {
+    
+            localStorage.setItem('usuario', usuario);
+            window.location.href = 'perfil1.html';     
+
+    } 
+    
+    if (usuario === 'Marisa' && contrasena === '123456') {
+    
+            localStorage.setItem('usuario', usuario);
+            window.location.href = 'perfil2.html';     
+
+    } 
+    
+    if (usuario === 'Marla' && contrasena === '123456') {
+    
+            localStorage.setItem('usuario', usuario);
+            window.location.href = 'perfil3.html';     
+
+    } 
+    
+    if (usuario === 'Antonio' && contrasena === '123456') {
+    
+            localStorage.setItem('usuario', usuario);
+            window.location.href = 'perfil4.html';     
+
+    } 
+    
+    if (usuario === 'Enrique' && contrasena === '123456') {
+    
+            localStorage.setItem('usuario', usuario);
+            window.location.href = 'perfil5.html';     
+
+    } 
+    
+    if (usuario === 'Amparo' && contrasena === '123456') {
+    
+            localStorage.setItem('usuario', usuario);
+            window.location.href = 'perfil6.html';     
+
     } else {
 
-        localStorage.setItem('usuario', usuario);
-        window.location.href = 'comunity.html';
-
+        alertUser.innerText = 'El usuario es incorrecto';
+        return;
     }
+
+
+
+
+
+
+
 });
+
+
+
+
+
+    
+
 
 
 

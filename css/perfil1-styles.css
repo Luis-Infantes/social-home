@@ -143,7 +143,38 @@ main#perfil > section:last-of-type {
   border-radius: 8px;
   padding: 10px;
   overflow-y: auto;
+  
 }
+
+
+.like-btn {
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+
+.like-btn:hover {
+  transform: scale(1.2);
+}
+
+
+
+.mensaje-usuario {
+  
+  font-weight: bold;
+  color: #747204;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.mensaje-vecino {
+  
+  color: #000;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
 
 
 
@@ -174,6 +205,52 @@ main#perfil > section:last-of-type {
 #chat-form button:hover {
   background-color: #5f5f03;
 }
+
+
+
+
+.eliminar-btn {
+
+  all: unset;
+  color: #5f5f03;
+  border-radius: 5px;
+  border: 1px solid #5f5f03;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.editar-btn {
+
+  all: unset;
+  color: #5f5f03;
+  border-radius: 5px;
+  border: 1px solid #5f5f03;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+
+  all: unset;
+  color: #5f5f03;
+  border-radius: 5px;
+  border: 1px solid #5f5f03;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
+.save-btn {
+
+  all: unset;
+  color: #5f5f03;
+  border-radius: 5px;
+  border: 1px solid #5f5f03;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
 
 /* Responsive para móviles */
 @media (max-width: 768px) {

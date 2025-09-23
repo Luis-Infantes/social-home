@@ -48,6 +48,11 @@ const returnComun = document.getElementById('return').onclick = function () {
     window.location.href = 'comunity.html';
 };
 
+const returnLogin = document.getElementById('return-login').onclick = function () {
+
+    window.location.href = 'index.html';
+};
+
 // ------------Funcion para contenedor de mensajes -------//
 
 
@@ -242,47 +247,68 @@ document.getElementById('chat-form').addEventListener('submit', function (e) {
 // Función para cargar mensajes añadidos
 
 function cargarMensajes() {
-
     const messages = JSON.parse(localStorage.getItem('mensajesChat')) || [];
+    const likes = JSON.parse(localStorage.getItem('likesChat')) || {};
     const content = document.getElementById('chat-message');
     content.innerHTML = '';
 
     messages.forEach((msg, index) => {
-
         const div = document.createElement('div');
         div.className = 'message';
         div.textContent = `${msg.usuario}: ${msg.texto}`;
 
-        // Botón para eliminar mensajes 
         if (msg.usuario === actualUser) {
+            div.classList.add('mensaje-usuario');
+        } else {
+            div.classList.add('mensaje-vecino');
 
+            // Botón de like solo para mensajes de otros usuarios
+            const likeHeart = document.createElement('span');
+            likeHeart.className = 'like-btn';
+            likeHeart.textContent = likes[index] ? '❤️' : '🤍';
+
+            likeHeart.addEventListener("click", function () {
+                // Cambia el estado visual
+                if (likeHeart.textContent === "🤍") {
+                    likeHeart.textContent = "❤️";
+                    likes[index] = true;
+                } else {
+                    likeHeart.textContent = "🤍";
+                    delete likes[index];
+                }
+                // Guarda en localStorage
+                localStorage.setItem('likesChat', JSON.stringify(likes));
+            });
+
+            div.appendChild(likeHeart);
+        }
+
+        // Botón para editar mensajes (solo del usuario actual)
+        if (msg.usuario === actualUser) {
+            const btnEdit = document.createElement('button');
+            btnEdit.textContent = '✏️';
+            btnEdit.className = 'editar-btn';
+            btnEdit.onclick = function () {
+                editarMensaje(index, msg.texto);
+            };
+            div.appendChild(btnEdit);
+        }
+
+        // Botón para eliminar mensajes (solo del usuario actual)
+        if (msg.usuario === actualUser) {
             const btnDelete = document.createElement('button');
-            btnDelete.textContent = 'Eliminar';
+            btnDelete.textContent = '❌';
             btnDelete.className = 'eliminar-btn';
             btnDelete.onclick = function () {
                 eliminarMensaje(index);
             };
-            
             div.appendChild(btnDelete);
-
-        // Botón para editar mensajes
-        
-            const btnEdit = document.createElement('button');
-            btnEdit.textContent = 'Editar';
-            btnEdit.className = 'editar-btn';
-            btnEdit.onclick = function () {
-
-                editarMensaje(index, msg.texto)
-            };
-
-            div.appendChild(btnEdit);
         }
 
         content.appendChild(div);
     });
 
     // Bajar el scroll hasta el último mensaje
-
     content.scrollTop = content.scrollHeight;
 }
 
@@ -303,14 +329,16 @@ function editarMensaje(index, textoActual) {
     mensajeDiv.appendChild(input);
 
     const btnGuardar = document.createElement('button');
-    btnGuardar.textContent = 'Guardar';
+    btnGuardar.textContent = '💾';
+    btnGuardar.className = 'save-btn';
     btnGuardar.onclick = function() {
         guardarEdicion(index, input.value);
     };
     mensajeDiv.appendChild(btnGuardar);
 
     const btnCancelar = document.createElement('button');
-    btnCancelar.textContent = 'Cancelar';
+    btnCancelar.textContent = '❌';
+    btnCancelar.className ='cancel-btn';
     btnCancelar.onclick = function() {
         cargarMensajes(); // Vuelve a mostrar los mensajes sin editar
     };
