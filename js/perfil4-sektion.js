@@ -396,6 +396,32 @@ function cargarMensajes() {
 
             div.appendChild(likeHeart);
         }
+
+        if (msg.usuario === 'Amparo') {
+
+            div.classList.add('mensaje-Amparo');
+
+
+            // Botón de like solo para mensajes de otros usuarios
+            const likeHeart = document.createElement('span');
+            likeHeart.className = 'like-btn';
+            likeHeart.textContent = likes[index] ? '❤️' : '🤍';
+
+            likeHeart.addEventListener("click", function () {
+                // Cambia el estado visual
+                if (likeHeart.textContent === "🤍") {
+                    likeHeart.textContent = "❤️";
+                    likes[index] = true;
+                } else {
+                    likeHeart.textContent = "🤍";
+                    delete likes[index];
+                }
+                // Guarda en localStorage
+                localStorage.setItem('likesChat', JSON.stringify(likes));
+            });
+
+            div.appendChild(likeHeart);
+        }
         // Botón para editar mensajes (solo del usuario actual)
         if (msg.usuario === actualUser) {
             const btnEdit = document.createElement('button');

@@ -68,6 +68,20 @@ main#perfil > section:last-of-type {
 
 #user-info {
   margin-bottom: 10px;
+  color: #0a3b64;
+  font-weight: bold;
+}
+
+.user-email {
+
+  all: unset;
+  cursor: pointer;
+  color: #0a3b64;
+}
+
+.user-email:hover {
+
+  color: #91abd1;
 }
 
 

@@ -370,9 +370,9 @@ function cargarMensajes() {
         }
         
 
-         if (msg.usuario === 'Enrique') {
+         if (msg.usuario === 'Amparo') {
 
-            div.classList.add('mensaje-Enrique');
+            div.classList.add('mensaje-Amparo');
 
 
             // Botón de like solo para mensajes de otros usuarios
