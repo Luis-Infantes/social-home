@@ -138,16 +138,16 @@ function followers(followerImg = null, followerLink = null, followersTittle) {
 
 const tittleFolllower = 'Seguidores';
 let followersImg1 = 'img/image5.png';
-let followersLink1 = 'perfil5.html';
+let followersLink1 = 'perfil5-user.html';
 
 let followersImg2 = 'img/imagen3.png';
-let followersLink2 = 'perfil3.html';
+let followersLink2 = 'perfil3-user.html';
 
 let followersImg3 = 'img/image2.png';
-let followersLink3 = 'perfil2.html';
+let followersLink3 = 'perfil2-user.html';
 
 let followersImg4 = 'img/image4.png';
-let followersLink4 = 'perfil4.html';
+let followersLink4 = 'perfil4-user.html';
 
 followers(followersImg1,followersLink1, tittleFolllower);
 followers(followersImg2,followersLink2);

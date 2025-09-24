@@ -43,10 +43,7 @@ personalDates.content('Tlf', tlfNumber);
 personalDates.content('Situación laboral', userWork);
 personalDates.content('Notas', userNote);
 
-const returnComun = document.getElementById('return').onclick = function () {
 
-    window.location.href = 'comunity.html';
-};
 
 const returnLogin = document.getElementById('return-login').onclick = function () {
 
@@ -135,13 +132,13 @@ function followers(followerImg = null, followerLink = null, followersTittle) {
 
 const tittleFolllower = 'Seguidores';
 let followersImg1 = 'img/image5.png';
-let followersLink1 = 'perfil5.html';
+let followersLink1 = 'perfil5-user.html';
 
 let followersImg2 = 'img/image1.png';
-let followersLink2 = 'perfil1.html';
+let followersLink2 = 'perfil1-user.html';
 
 let followersImg3 = 'img/image6.png';
-let followersLink3 = 'perfil6.html';
+let followersLink3 = 'perfil6-user.html';
 
 
 

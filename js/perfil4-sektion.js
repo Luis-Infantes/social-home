@@ -44,10 +44,7 @@ personalDates.content('Situación laboral', userWork);
 personalDates.content('Notas', userNote);
 
 
-const returnComun = document.getElementById('return').onclick = function () {
 
-    window.location.href = 'comunity.html';
-};
 
 const returnLogin = document.getElementById('return-login').onclick = function () {
 
@@ -136,16 +133,16 @@ function followers(followerImg = null, followerLink = null, followersTittle) {
 
 const tittleFolllower = 'Seguidores';
 let followersImg1 = 'img/image5.png';
-let followersLink1 = 'perfil5.html';
+let followersLink1 = 'perfil5-user.html';
 
 let followersImg2 = 'img/imagen3.png';
-let followersLink2 = 'perfil3.html';
+let followersLink2 = 'perfil3-user.html';
 
 let followersImg3 = 'img/image2.png';
-let followersLink3 = 'perfil2.html';
+let followersLink3 = 'perfil2-user.html';
 
 let followersImg4 = 'img/image1.png';
-let followersLink4 = 'perfil1.html';
+let followersLink4 = 'perfil1-user.html';
 
 followers(followersImg1,followersLink1, tittleFolllower);
 followers(followersImg2,followersLink2);

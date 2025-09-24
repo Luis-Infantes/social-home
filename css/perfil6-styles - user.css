@@ -1,0 +1,303 @@
+/*---Estilos generales---*/
+
+body {
+
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to left, #690929, #eca2bb); 
+  color: #000;
+}
+
+/*----Contenedor principal-----*/
+
+
+
+main#perfil {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+/* Sección izquierda */
+main#perfil > section:first-of-type {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+
+
+
+
+/* Tarjeta de datos personales */
+#user-dates {
+  border: 2px solid #eca2bb;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  width: 50%;
+  margin: auto;
+}
+
+
+
+#user-dates img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+#user-info {
+  margin-bottom: 10px;
+  color: #690929;
+  font-weight: bold;
+}
+
+.user-email {
+
+  all: unset;
+  cursor: pointer;
+  color: #690929;
+}
+
+.user-email:hover {
+
+  color: #eca2bb;
+}
+
+
+
+
+/* Botones */
+.perfil1-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: 92%;
+  
+  
+}
+
+.perfil1-buttons button {
+  all: unset;
+  padding: 8px 12px;
+  border: 1px solid #690929;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  
+  
+  
+  
+}
+
+
+.perfil1-buttons button:hover {
+  background-color: #690929;
+}
+
+
+
+
+/* Tarjetas adicionales */
+#user-msn {
+  border: 2px solid #eca2bb;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  
+}
+
+
+
+
+/*Estilos para el contenedor de mensajes*/
+
+.msn-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: -10px;
+  cursor: pointer;
+  
+  
+}
+
+.msn-img:hover {
+
+  opacity: 50%;
+}
+
+.msn-names {
+
+  color: #690929;
+  font-weight: bold;
+  margin-top: -10px;
+  
+
+}
+
+.msn-text {
+
+  color: #690929;
+  font-weight: bold;
+  border: 1px solid #690929;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+
+}
+
+.msn-text:hover {
+
+  color: #eca2bb;
+  background-color: #690929;
+
+}
+
+/*---------------------------------------------------------*/
+
+/*-----Clases para el contenedor de mensajes privados------*/
+
+.div-send {
+
+  border: 2px solid #eca2bb;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  width: 50%;
+  margin: auto;
+  text-align: center;
+
+}
+
+.tittle-send {
+
+  color: #690929;
+  
+}
+
+.textarea-send {
+
+  
+  background-color:#690929;
+  border: 1px solid #eca2bb;
+  width: 40%;
+}
+
+.btn-send {
+
+  all: unset;
+  cursor: pointer;
+  color: #eca2bb;
+  background-color: #690929;
+  padding: 2px 15px;
+  border: 1px solid #eca2bb;
+  border-radius: 10px;
+  display: flex;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.btn-send:hover {
+
+  color: #690929;
+  background-color: #eca2bb;
+}
+
+/*---------------------------------------------------------*/
+
+.follower-tittle {
+
+  color: #690929;
+  font-weight: bold;
+
+
+}
+
+.followers-container {
+
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espacio entre imágenes */
+  flex-wrap: wrap; /* Para que pasen a otra línea si hay muchas */
+
+
+}
+
+
+.follower-img {
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px;
+   
+  
+  
+  
+
+}
+
+.follower-img:hover {
+
+  opacity: 50%;
+}
+
+/*---------------------------------------------------*/
+
+
+/*Estilos para el tablón de anuncios*/
+
+.contact-tittle {
+
+  font-weight: bold;
+  color: #690929;
+  text-align: center;
+}
+
+.contact-card {
+
+  font-size: 12px;
+}
+
+
+
+/*-------------------------------------------------*/
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  main#perfil {
+    flex-direction: column;
+  }
+
+  main#perfil > section {
+    width: 100%;
+  }
+}
+
+
+
+
