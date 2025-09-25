@@ -85,6 +85,78 @@ main#perfil > section:last-of-type {
   color: #87f0e2;
 }
 
+/*Estado de usuario*/
+
+.mood-styles {
+
+
+border: 1px, solid #064b2e;
+border-radius: 10px;
+padding: 8px;
+
+
+}
+
+.mood-input {
+
+all: unset;  
+border: 1px, solid #064b2e;
+border-radius: 10px;
+padding: 8px;
+
+
+}
+
+.mood-edit {
+
+  all: unset;
+  cursor: pointer;
+  display: block;
+  opacity: 50%;
+  margin-top: -10px;
+  border: 1px solid #064b2e;
+  border-radius: 15px;
+  padding: 5px;
+  
+  
+  
+  
+  
+}
+
+.mood-edit:hover {
+
+  opacity: 100%;
+  background-color: #064b2e;
+}
+
+
+.save-btn {
+
+  all: unset;
+  cursor: pointer;
+  display: block;
+  opacity: 50%;
+  border: 1px solid #064b2e;
+  border-radius: 15px;
+  padding: 5px;
+  
+  
+  
+  
+  
+}
+
+.save-btn:hover {
+
+  opacity: 100%;
+  background-color: #064b2e;
+}
+
+
+
+/*------------------------------------*/
+
 
 
 /* Botones */
@@ -96,15 +168,17 @@ main#perfil > section:last-of-type {
 .perfil2-buttons button {
   padding: 8px 12px;
   background-color: #064b2e;
-  color: #fff;
+  color: #87f0e2;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  opacity: 75%;
 }
 
 
 .perfil2-buttons button:hover {
   background-color: #064b2e;
+  opacity: 100%;
 }
 
 
@@ -359,6 +433,15 @@ main#perfil > section:last-of-type {
   border: 1px solid #064b2e;
   margin-left: 10px;
   cursor: pointer;
+}
+
+.editar-btn:hover,
+.eliminar-btn:hover,
+.cancel-btn:hover {
+
+
+  background-color: #064b2e;
+
 }
 
 

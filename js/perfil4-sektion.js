@@ -31,9 +31,6 @@ const property = '4º A';
 const email = 'AntonGar@contact.es';
 const tlfNumber = '444 44 44 44';
 const userWork = 'Autónomo';
-const userNote = 'Intento ir a las reuniones pero siempre sale algo a última hora';
-
-
 
 
 personalDates.content('Nombre', userName);
@@ -41,9 +38,72 @@ personalDates.content('Piso', property);
 personalDates.content('email', email);
 personalDates.content('Tlf', tlfNumber);
 personalDates.content('Situación laboral', userWork);
-personalDates.content('Notas', userNote);
 
 
+
+//-----Función estado de ánimo----------------------------//
+
+const userInfo = document.getElementById('user-info');
+
+// Crear contenedor
+const moodContainer = document.createElement('div');
+moodContainer.className = 'mood-container';
+
+// Crear párrafo con estado de ánimo
+const mood = document.createElement('p');
+mood.textContent = 'Hoy me siento tranquilo';
+mood.className = 'mood-styles';
+
+// Cargar estado guardado en localStorage
+const moodSave = localStorage.getItem('actualmood4');
+if (moodSave) {
+    mood.textContent = moodSave;
+}
+
+moodContainer.appendChild(mood);
+
+// Crear botón de editar
+const moodEdit = document.createElement('button');
+moodEdit.textContent = '✏️';
+moodEdit.className = 'mood-edit';
+
+moodEdit.addEventListener('click', () => {
+    const actualText = mood.textContent;
+
+    // Crear campo editable
+    const moodInput = document.createElement('textarea');
+    moodInput.value = actualText;
+    moodInput.className = 'mood-input';
+    moodInput.rows = 3;
+
+    // Crear botón de guardar
+    const saveBtn = document.createElement('button');
+    saveBtn.textContent = '💾';
+    saveBtn.className = 'save-btn';
+
+    // Limpiar contenedor y añadir campo editable + botón
+    moodContainer.innerHTML = '';
+    moodContainer.appendChild(moodInput);
+    moodContainer.appendChild(saveBtn);
+
+    // Guardar en localStorage al hacer clic
+    saveBtn.addEventListener('click', () => {
+        const newMood = moodInput.value;
+        localStorage.setItem('actualmood4', newMood);
+
+        // Volver a mostrar el texto y botón de editar
+        mood.textContent = newMood;
+        moodContainer.innerHTML = '';
+        moodContainer.appendChild(mood);
+        moodContainer.appendChild(moodEdit);
+    });
+});
+
+// Añadir todo al contenedor principal
+moodContainer.appendChild(moodEdit);
+userInfo.appendChild(moodContainer);
+
+//--------------------------------------------------------//
 
 
 const returnLogin = document.getElementById('return-login').onclick = function () {
