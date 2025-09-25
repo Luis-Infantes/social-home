@@ -31,7 +31,7 @@ const userName = 'Santiago Torres';
 const property = '1º A';
 const email = 'SantiThor@contact.es';
 const tlfNumber = '111 11 11 11';
-const userWork = 'Parado';
+const userWork = '';
 
 
 
@@ -44,11 +44,82 @@ personalDates.content('Tlf', tlfNumber);
 personalDates.content('Situación laboral', userWork);
 
 
+const userInfo = document.getElementById('user-info');
+
+//--------Función situación laboral--------------------//
+
+// Crear contenedor
+
+const workContainer = document.createElement('div');
+workContainer.className = 'work-container';
+
+
+// Crear situación laboral actual
+
+const work = document.createElement('p');
+work.textContent = 'Activo';
+work.className = 'actual-work';
+
+// Cargar estado guardado en localStorage
+const workSave = localStorage.getItem('actualwork1');
+if (workSave) {
+    work.textContent = workSave;
+}
+
+workContainer.appendChild(work);
+
+
+// Botón de editar situación laboral
+
+const workEdit = document.createElement('button');
+workEdit.textContent = '✏️';
+workEdit.className = 'work-edit';
+
+workEdit.addEventListener('click', () => {
+    const actualWork = work.textContent;
+
+    // Crear campo editable
+    const workInput = document.createElement('input');
+    workInput.value = actualWork
+    workInput.className = 'work-input';
+    workInput.rows = 3;
+
+    // Crear botón de guardar
+    const workBtn = document.createElement('button');
+    workBtn.textContent = '💾';
+    workBtn.className = 'work-btn';
+
+    // Limpiar contenedor y añadir campo editable + botón
+    workContainer.innerHTML = '';
+    workContainer.appendChild(workInput);
+    workContainer.appendChild(workBtn);
+
+    // Guardar en localStorage al hacer clic
+    workBtn.addEventListener('click', () => {
+        const newWork = workInput.value;
+        localStorage.setItem('actualwork1', newWork);
+
+        // Volver a mostrar el texto y botón de editar
+        work.textContent = newWork;
+        workContainer.innerHTML = '';
+        workContainer.appendChild(work);
+        workContainer.appendChild(workEdit);
+    });
+});
+
+// Añadir todo al contenedor principal
+workContainer.appendChild(workEdit);
+
+
+
+userInfo.appendChild(workContainer);
+//---------------------------------------------------------//
+
 
 
 //-----Función estado de ánimo----------------------------//
 
-const userInfo = document.getElementById('user-info');
+
 
 // Crear contenedor
 const moodContainer = document.createElement('div');
@@ -76,7 +147,7 @@ moodEdit.addEventListener('click', () => {
     const actualText = mood.textContent;
 
     // Crear campo editable
-    const moodInput = document.createElement('textarea');
+    const moodInput = document.createElement('input');
     moodInput.value = actualText;
     moodInput.className = 'mood-input';
     moodInput.rows = 3;
@@ -84,7 +155,7 @@ moodEdit.addEventListener('click', () => {
     // Crear botón de guardar
     const saveBtn = document.createElement('button');
     saveBtn.textContent = '💾';
-    saveBtn.className = 'save-btn';
+    saveBtn.className = 'work-btn';
 
     // Limpiar contenedor y añadir campo editable + botón
     moodContainer.innerHTML = '';

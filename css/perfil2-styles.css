@@ -93,6 +93,8 @@ main#perfil > section:last-of-type {
 border: 1px, solid #064b2e;
 border-radius: 10px;
 padding: 8px;
+background-color: #064b2e;
+color: #87f0e2;
 
 
 }
@@ -131,12 +133,43 @@ padding: 8px;
 }
 
 
-.save-btn {
+
+
+
+/*------------------------------------*/
+
+/*Estilos situación laboral*/
+
+.actual-work {
+
+
+border: 1px, solid #064b2e;
+border-radius: 10px;
+padding: 8px;
+background-color: #064b2e;
+color: #87f0e2;
+
+
+}
+
+.work-input {
+
+all: unset;  
+border: 1px, solid #064b2e;
+border-radius: 10px;
+padding: 8px;
+margin-bottom: 10px;
+
+
+}
+
+.work-edit {
 
   all: unset;
   cursor: pointer;
   display: block;
   opacity: 50%;
+  margin-top: -10px;
   border: 1px solid #064b2e;
   border-radius: 15px;
   padding: 5px;
@@ -147,7 +180,30 @@ padding: 8px;
   
 }
 
-.save-btn:hover {
+.work-edit:hover {
+
+  opacity: 100%;
+  background-color: #064b2e;
+}
+
+
+.work-btn {
+
+  all: unset;
+  margin-left: 5px;
+  cursor: pointer;
+  opacity: 50%;
+  border: 1px solid #064b2e;
+  border-radius: 8px;
+  padding: 2px;
+  
+  
+  
+  
+  
+}
+
+.work-btn:hover {
 
   opacity: 100%;
   background-color: #064b2e;
@@ -155,7 +211,9 @@ padding: 8px;
 
 
 
-/*------------------------------------*/
+
+
+/*-------------------------------------*/
 
 
 
