@@ -1,6 +1,9 @@
 Mini red social para comunidad de vecinos — Social Home
+
 Usuarios disponibles: Santiago, Marisa, Marla, Antonio, Enrique y Amparo
+
 Contraseña de acceso: 123456
+
 Este proyecto es una mini red social pensada para una comunidad de vecinos. Aunque aún hay partes por pulir y funcionalidades por desarrollar, he decidido subir esta primera versión para ir actualizándola poco a poco.
 
 Funcionalidades actuales:
