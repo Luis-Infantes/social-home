@@ -468,13 +468,13 @@ function cargarMensajes() {
                 //Cambio del color de los mensajes del chat segun el usuario que escriba
 
         if (msg.usuario === actualUser) {
-            div.classList.add('mensaje-usuario');
+            div.classList.add('message-user');
         } 
 
 
         if (msg.usuario === 'Santiago') {
 
-            div.classList.add('mensaje-Santiago');
+            div.classList.add('message-Santiago');
 
 
             // Botón de like solo para mensajes de otros usuarios
@@ -500,7 +500,7 @@ function cargarMensajes() {
 
         if (msg.usuario === 'Marisa') {
 
-            div.classList.add('mensaje-Marisa');
+            div.classList.add('message-Marisa');
 
 
             // Botón de like solo para mensajes de otros usuarios
@@ -527,7 +527,7 @@ function cargarMensajes() {
 
         if (msg.usuario === 'Marla') {
 
-            div.classList.add('mensaje-Marla');
+            div.classList.add('message-Marla');
 
 
             // Botón de like solo para mensajes de otros usuarios
@@ -553,9 +553,6 @@ function cargarMensajes() {
 
         if (msg.usuario === 'Antonio') {
 
-            div.classList.add('mensaje-Antonio');
-
-
             // Botón de like solo para mensajes de otros usuarios
             const likeHeart = document.createElement('span');
             likeHeart.className = 'like-btn';
@@ -580,7 +577,7 @@ function cargarMensajes() {
 
          if (msg.usuario === 'Enrique') {
 
-            div.classList.add('mensaje-Enrique');
+            div.classList.add('message-Enrique');
 
 
             // Botón de like solo para mensajes de otros usuarios
@@ -606,7 +603,7 @@ function cargarMensajes() {
 
         if (msg.usuario === 'Amparo') {
 
-            div.classList.add('mensaje-Amparo');
+            div.classList.add('message-Amparo');
 
 
             // Botón de like solo para mensajes de otros usuarios

@@ -22,7 +22,7 @@ main#perfil {
 
 
 
-/* Sección izquierda */
+/* Sección izquierda (Datos personales y otros) */
 main#perfil > section:first-of-type {
   flex: 1 1 300px;
   display: flex;
@@ -381,7 +381,7 @@ margin-bottom: 10px;
 
 /*Estilos para el cambio de color de los mensajes del chat dependiendo del usuario que escriba*/
 
-.mensaje-usuario {
+.message-user{
   
   font-weight: bold;
   
@@ -392,7 +392,7 @@ margin-bottom: 10px;
 }
 
 
-.mensaje-Marisa {
+.message-Marisa {
   
   font-weight: bold;
   color: #064b2e;
@@ -400,7 +400,7 @@ margin-bottom: 10px;
   margin-left: auto;
 }
 
-.mensaje-Marla {
+.message-Marla {
   
   font-weight: bold;
   color: #707072;
@@ -408,7 +408,7 @@ margin-bottom: 10px;
   margin-left: auto;
 }
 
-.mensaje-Antonio {
+.message-Antonio {
   
   font-weight: bold;
   color: #5e035e;
@@ -416,7 +416,7 @@ margin-bottom: 10px;
   margin-left: auto;
 }
 
-.mensaje-Enrique {
+.message-Enrique {
   
   font-weight: bold;
   color: #0a3b64;
@@ -425,7 +425,7 @@ margin-bottom: 10px;
 }
 
 
-.mensaje-Amparo {
+.message-Amparo {
   
   font-weight: bold;
   color: #690929;

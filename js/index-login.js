@@ -14,21 +14,21 @@ formLogin.className = 'login-form';
 //Mensaje de alerta usuario
 
 let alertUser = document.createElement('p');
-alertUser.className = 'alerta-usuario';
+alertUser.className = 'alert-user';
 
 
 
 // Campo del usuario
 const userInput = document.createElement('input');
 userInput.type = 'text';
-userInput.placeholder = 'Nombre del vecino/a';
+userInput.placeholder = 'Usuario';
 userInput.required = true;
 
 
 // Mensaje de alerta de contraseña
 
 let alertPass = document.createElement('p');
-alertPass.className = 'alerta-pass';
+alertPass.className = 'alert-pass';
 
 // Campo de la contraseña
 const passInput = document.createElement('input');
@@ -50,63 +50,63 @@ formLogin.addEventListener('submit', function(event) {
 
     event.preventDefault();//Evitamos recargar la página
 
-    const usuario = userInput.value.trim();
-    const contrasena = passInput.value.trim();
+    const u = userInput.value.trim();
+    const p = passInput.value.trim();
     const onlyText = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
 
-    //Acceso a los perfiles
+//Acceso a los perfiles
 
-    if ((!onlyText.test(usuario))) {
+    if ((!onlyText.test(u))) {
 
         alertUser.innerText = 'El campo del nombre solo puede contener letras y espacios';
         return;
     }
 
-    if (contrasena.length !==6) {
+    if (p.length !==6) {
 
         alertPass.innerText ='El campo de la contraseña debe de contener 6 dígitos';
         return;
 
     }
     
-    if (usuario === 'Santiago' && contrasena === '123456') {
+    if (u === 'Santiago' && p === '123456') {
     
-            localStorage.setItem('usuario', usuario);
+            localStorage.setItem('usuario', u);
             window.location.href = 'perfil1.html';     
 
     } 
     
-    if (usuario === 'Marisa' && contrasena === '123456') {
+    if (u === 'Marisa' && p === '123456') {
     
-            localStorage.setItem('usuario', usuario);
+            localStorage.setItem('usuario', u);
             window.location.href = 'perfil2.html';     
 
     } 
     
-    if (usuario === 'Marla' && contrasena === '123456') {
+    if (u === 'Marla' && p === '123456') {
     
-            localStorage.setItem('usuario', usuario);
+            localStorage.setItem('usuario', u);
             window.location.href = 'perfil3.html';     
 
     } 
     
-    if (usuario === 'Antonio' && contrasena === '123456') {
+    if (u === 'Antonio' && p === '123456') {
     
-            localStorage.setItem('usuario', usuario);
+            localStorage.setItem('usuario', u);
             window.location.href = 'perfil4.html';     
 
     } 
     
-    if (usuario === 'Enrique' && contrasena === '123456') {
+    if (u === 'Enrique' && p === '123456') {
     
-            localStorage.setItem('usuario', usuario);
+            localStorage.setItem('usuario', u);
             window.location.href = 'perfil5.html';     
 
     } 
     
-    if (usuario === 'Amparo' && contrasena === '123456') {
+    if (u=== 'Amparo' && p === '123456') {
     
-            localStorage.setItem('usuario', usuario);
+            localStorage.setItem('usuario', u);
             window.location.href = 'perfil6.html';     
 
     } else {
@@ -115,33 +115,14 @@ formLogin.addEventListener('submit', function(event) {
         return;
     }
 
-
-
-
-
-
-
 });
 
-
-
-
-
-    
-
-
-
-
-
 // Añadir los elementos al formulario
-
-
 formLogin.appendChild(userInput);
 formLogin.appendChild(passInput);
 formLogin.appendChild(submitBtn);
 
 //Añadir formulario al contenedor
-
 container.appendChild(formLogin);
 container.appendChild(alertUser);
 container.appendChild(alertPass);

@@ -15,6 +15,7 @@ body {
 }
 
 
+/*Contendor principal*/
 
 main {
   width: 100%;
@@ -23,7 +24,9 @@ main {
   align-items: center;
 }
 
+/*-------------------------*/
 
+/*formulario de acceso*/
 
 #login {
   
@@ -36,8 +39,8 @@ main {
 }
 
 
-.alerta-usuario,
-.alerta-pass {
+.alert-user,
+.alert-pass {
 
   font-size: 10px;
   color: brown;
@@ -72,6 +75,8 @@ main {
     cursor: pointer;
 
 }
+
+/*-------------------------*/
 
 
 
