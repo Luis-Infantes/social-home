@@ -1,17 +1,21 @@
 # social-home
-Mini red social de comunidad de vecinos
+Mini red social para comunidad de vecinos — Social Home
 
-Usarios: Santiago, Marisa, Marla, Antonio, Enrique y Amparo
+Usuarios disponibles: Santiago, Marisa, Marla, Antonio, Enrique y Amparo
+Contraseña de acceso: 123456
 
-Contraseña: 123456
+Este proyecto es una mini red social pensada para una comunidad de vecinos. Aunque aún hay partes por pulir y funcionalidades por desarrollar, he decidido subir esta primera versión para ir actualizándola poco a poco.
 
-Con este proyecto he querido crear lo que sería una mini de red social para una comunidad de vecinos.
-Aunque me quedan muchas partes que pulir y desarrollar, he pensado en subirlo ya, y luego ir haciendo las actualizaciones de poco en poco.
+Funcionalidades actuales:
 
-Por ahora se puede entrar en el perfil de cada uno de los ususarios y ver tu interfaz completa.
-Tienes acceso a otra más limitada de los demás vecinos.
-Tendrás acceso a un chat de la comunidad donde puedes escribir con otros vecinos y dar likes a cada uno de sus comentarios.
-Puedes actualizar tu estado díario y tu situación laboral.
+Acceso al perfil completo del usuario que inicia sesión.
+Visualización limitada de los perfiles de otros vecinos.
+Chat comunitario con posibilidad de escribir mensajes, dar "me gusta" y eliminar los propios.
+Actualización del estado diario y situación laboral del usuario.
 
-Espero que os guste.
+Próximas mejoras:
+
+Optimización de campos y botones sin uso.
+Traducción progresiva al inglés.
+Nuevas funcionalidades para el perfil del presidente de la comunidad.
 
