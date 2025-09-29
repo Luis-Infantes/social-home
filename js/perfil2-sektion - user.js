@@ -142,7 +142,7 @@ document.getElementById('return-back').onclick = function () {
 
    } else {
 
-        alert('No se ha encontrado ningún pefil');
+        alert('Dale al botón para volver a tu perfil');
     }
     
 };
