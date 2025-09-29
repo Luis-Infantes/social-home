@@ -110,20 +110,46 @@ userInfo.appendChild(moodContainer);
 
 //--------------------------------------------------------//
 
+//------Regresar a la página del usuario---------------------//
 
-const returnBack = document.getElementById('return-back').onclick = function () {
+document.getElementById('return-back').onclick = function () {
 
-    addEventListener('click', () => {history.back()});
+    const usuario = localStorage.getItem('usuario');
+
+     if (usuario === 'Santiago') {
+
+        window.location.href = 'perfil1.html';
+
+   } if (usuario === 'Marisa') {
+    
+        window.location.href = 'perfil2.html';
+
+   } if (usuario === 'Marla') {
+    
+        window.location.href = 'perfil3.html';
+
+   } if (usuario === 'Antonio') {
+    
+        window.location.href = 'perfil4.html';
+
+   } if (usuario === 'Enrique') {
+    
+        window.location.href = 'perfil5.html';
+
+   } if (usuario === 'Amparo') {
+    
+        window.location.href = 'perfil6.html';
+
+   } else {
+
+        alert('No se ha encontrado ningún pefil');
+    }
     
 };
 
 
 
-
-
-
-
-//--------------------------------------------------------------------------
+//--------------------------------------------------------------------------//
 
 //-------Enviar mensajes privados-------------------------------------------
 

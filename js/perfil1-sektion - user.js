@@ -118,11 +118,6 @@ userInfo.appendChild(moodContainer);
 
 
 
-const returnBack = document.getElementById('return-back').onclick = function () {
-
-    addEventListener('click', () => {history.back()});
-    
-};
 
 
 //-------Enviar mensajes privados-------------------------------------------
