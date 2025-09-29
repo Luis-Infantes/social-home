@@ -263,12 +263,12 @@ function followers(followerImg = null, followerLink = null, followersTittle) {
 }
 
 const tittleFolllower = 'Seguidores';
-let followersImg1 = 'img/image5.png';
+let followersImg1 = '../img/image5.png';
 let followersLink1 = 'perfil5-user.html';
 
 
 
-let followersImg3 = 'img/image2.png';
+let followersImg3 = '../img/image2.png';
 let followersLink3 = 'perfil2-user.html';
 
 

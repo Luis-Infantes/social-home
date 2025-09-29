@@ -265,19 +265,19 @@ const tittleFolllower = 'Seguidores';
 let followersImg1 = '';
 let followersLink1 = '';
 
-let followersImg2 = 'img/imagen3.png';
+let followersImg2 = '../img/imagen3.png';
 let followersLink2 = 'perfil3-user.html';
 
-let followersImg3 = 'img/image2.png';
+let followersImg3 = '../img/image2.png';
 let followersLink3 = 'perfil2-user.html';
 
-let followersImg4 = 'img/image4.png';
+let followersImg4 = '../img/image4.png';
 let followersLink4 = 'perfil4-user.html';
 
-let followersImg5 = 'img/image1.png';
+let followersImg5 = '../img/image1.png';
 let followersLink5 = 'perfil1-user-user.html';
 
-let followersImg6 = 'img/image6.png';
+let followersImg6 = '../img/image6.png';
 let followersLink6 = 'perfil6-user.html';
 
 followers(followersImg1,followersLink1, tittleFolllower);

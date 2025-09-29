@@ -228,9 +228,9 @@ function addFollower(followerImg = null, followerLink = null) {
 }
 
 // Añadir seguidores
-addFollower('img/image5.png', 'perfil5-user.html');
-addFollower('img/imagen3.png', 'perfil3-user.html');
-addFollower('img/image2.png', 'perfil2-user.html');
+addFollower('../img/image5.png', 'perfil5-user.html');
+addFollower('../img/imagen3.png', 'perfil3-user.html');
+addFollower('../img/image2.png', 'perfil2-user.html');
 
 //------------------------------------------------------------------------------------------
 
