@@ -141,10 +141,7 @@ document.getElementById('return-back').onclick = function () {
     
         window.location.href = 'perfil6.html';
 
-   } else {
-
-        alert('Dale al botón para volver a tu perfil');
-    }
+   } 
     
 };
 
