@@ -12,7 +12,7 @@ body {
 
 
 
-main#perfil {
+main.perfil {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -23,7 +23,7 @@ main#perfil {
 
 
 /* Sección izquierda */
-main#perfil > section:first-of-type {
+main.perfil > section:first-of-type {
   flex: 1 1 300px;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@ main#perfil > section:first-of-type {
 
 
 /* Tarjeta de datos personales */
-#user-dates {
+.user-dates {
   border: 2px solid #efeff3;
   padding: 20px;
   border-radius: 12px;
@@ -51,7 +51,7 @@ main#perfil > section:first-of-type {
 
 
 
-#user-dates img {
+.user-dates img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -63,7 +63,7 @@ main#perfil > section:first-of-type {
 
 
 
-#user-info {
+.user-info {
   margin-bottom: 10px;
   color: #707072;
   font-weight: bold;
@@ -82,7 +82,51 @@ main#perfil > section:first-of-type {
 }
 
 
+/*Estado de usuario*/
 
+.mood-styles {
+
+
+border: 1px, solid #707072;
+border-radius: 10px;
+padding: 8px;
+background-color: #707072;
+color: #efeff3;
+
+
+}
+
+.mood-tittle {
+
+  color: #707072;
+}
+
+
+
+/*------------------------------------*/
+
+
+/*Estilos situación laboral*/
+
+.actual-work {
+
+
+border: 1px, solid #707072;
+border-radius: 10px;
+padding: 8px;
+background-color: #707072;
+color: #efeff3;
+
+
+}
+.work-tittle {
+
+  color: #707072;
+}
+
+
+
+/*-------------------------------------*/
 
 /* Botones */
 .perfil1-buttons {
@@ -115,7 +159,7 @@ main#perfil > section:first-of-type {
 
 
 /* Tarjetas adicionales */
-#user-msn {
+.user-msn {
   border: 2px solid #efeff3;
   padding: 20px;
   border-radius: 12px;
@@ -289,11 +333,11 @@ main#perfil > section:first-of-type {
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
-  main#perfil {
+  main.perfil {
     flex-direction: column;
   }
 
-  main#perfil > section {
+  main.perfil > section {
     width: 100%;
   }
 }

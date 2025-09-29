@@ -28,7 +28,7 @@ main {
 
 /*formulario de acceso*/
 
-#login {
+.login {
   
   border: 2px, solid, #a3712a;
   padding: 2rem;

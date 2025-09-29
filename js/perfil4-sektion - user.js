@@ -30,8 +30,7 @@ const userName = 'Antonio García';
 const property = '4º A';
 const email = 'AntonGar@contact.es';
 const tlfNumber = '444 44 44 44';
-const userWork = 'Autónomo';
-const userNote = 'Intento ir a las reuniones pero siempre sale algo a última hora';
+
 
 
 
@@ -40,8 +39,76 @@ personalDates.content('Nombre', userName);
 personalDates.content('Piso', property);
 personalDates.content('email', email);
 personalDates.content('Tlf', tlfNumber);
-personalDates.content('Situación laboral', userWork);
-personalDates.content('Notas', userNote);
+
+
+const userInfo = document.getElementById('user-info');
+
+//--------Mostrar situación laboral guardada en local--------------------//
+
+//contenedor que engloba situación laboral
+
+const workContainer = document.createElement('div');
+workContainer.className = 'work-container';
+
+
+//título de laboral actual
+
+const workTittle = document.createElement('h2');
+workTittle.textContent = 'Situación Laboral';
+workTittle.className = 'work-tittle';
+
+workContainer.appendChild(workTittle);
+
+//Información estática de situación laboral
+const work = document.createElement('p');
+work.textContent = 'Activo';
+work.className = 'actual-work';
+
+// Cargar estado guardado en localStorage
+const workSave = localStorage.getItem('actualwork1');
+if (workSave) {
+    work.textContent = workSave;
+}
+
+
+workContainer.appendChild(work);
+
+userInfo.appendChild(workContainer);
+//---------------------------------------------------------//
+
+
+
+//-----Función estado de ánimo----------------------------//
+
+
+
+//Contenedor que engloba estado de ánimo
+const moodContainer = document.createElement('div');
+moodContainer.className = 'mood-container';
+
+//Título de estado de ánimo
+const moodTittle = document.createElement('h2');
+moodTittle.textContent = 'Estado de ánimo';
+moodTittle.className = 'mood-tittle';
+
+workContainer.appendChild(moodTittle);
+
+//Información estática con estado de ánimo
+const mood = document.createElement('p');
+mood.textContent = 'Hoy me siento tranquilo';
+mood.className = 'mood-styles';
+
+// Cargar estado guardado en localStorage
+const moodSave = localStorage.getItem('actualmood1');
+if (moodSave) {
+    mood.textContent = moodSave;
+}
+
+moodContainer.appendChild(mood);
+
+userInfo.appendChild(moodContainer);
+
+//--------------------------------------------------------//
 
 
 const returnBack = document.getElementById('return-back').onclick = function () {

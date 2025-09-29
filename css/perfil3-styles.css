@@ -14,7 +14,7 @@ body {
 
 
 
-main#perfil {
+main.perfil {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -25,7 +25,7 @@ main#perfil {
 
 
 /* Sección izquierda (Datos personales y otros)*/
-main#perfil > section:first-of-type {
+main.perfil > section:first-of-type {
   flex: 1 1 300px;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@ main#perfil > section:first-of-type {
 
 
 /* Sección derecha (chat) */
-main#perfil > section:last-of-type {
+main.perfil > section:last-of-type {
   flex: 2 1 400px;
   border: 2px solid #efeff3;
   padding: 20px;
@@ -46,7 +46,7 @@ main#perfil > section:last-of-type {
 
 
 /* Tarjeta de datos personales */
-#user-dates {
+.user-dates {
   border: 2px solid #efeff3;
   padding: 20px;
   border-radius: 12px;
@@ -58,7 +58,7 @@ main#perfil > section:last-of-type {
 
 
 
-#user-dates img {
+.user-dates img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -66,7 +66,7 @@ main#perfil > section:last-of-type {
   margin-bottom: 10px;
 }
 
-#user-info {
+.user-info {
   margin-bottom: 10px;
   color: #707072;
   font-weight: bold;
@@ -241,8 +241,8 @@ margin-bottom: 10px;
 
 
 /* Tarjetas adicionales */
-#user-msn,
-#user-calendar,
+.user-msn,
+.user-calendar,
 #user-contacts {
   border: 2px solid #efeff3;
   padding: 20px;
@@ -251,15 +251,15 @@ margin-bottom: 10px;
 }
 
 
-#calendar-contact-wrapper {
+.calendar-contact-wrapper {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
 
 /* Ajustamos los dos contenedores para que compartan el espacio */
-#user-calendar,
-#user-contacts {
+.user-calendar,
+.user-contacts {
   flex: 1 1 45%;
   border: 2px solid #efeff3;
   padding: 20px;
@@ -343,7 +343,7 @@ margin-bottom: 10px;
 /*---------------------------------------------------*/
 
 /* Chat */
-#user-chat {
+.user-chat {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -356,7 +356,7 @@ margin-bottom: 10px;
 
 
 
-#chat-message {
+.chat-message {
   height: 200px;
   background-color: #fff;
   border-radius: 8px;
@@ -433,12 +433,12 @@ margin-bottom: 10px;
 
 
 
-#chat-form {
+.chat-form {
   display: flex;
   gap: 10px;
 }
 
-#chat-input {
+.chat-input {
   flex: 1;
   padding: 8px;
   border-radius: 6px;
@@ -447,7 +447,7 @@ margin-bottom: 10px;
 
 
 
-#chat-form button {
+.chat-form button {
   padding: 8px 12px;
   background-color: #707072;
   color: #fff;
@@ -457,7 +457,7 @@ margin-bottom: 10px;
 }
 
 
-#chat-form button:hover {
+.chat-form button:hover {
   background-color: #707072;
 }
 
@@ -532,11 +532,11 @@ margin-bottom: 10px;
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
-  main#perfil {
+  main.perfil {
     flex-direction: column;
   }
 
-  main#perfil > section {
+  main.perfil > section {
     width: 100%;
   }
 }
