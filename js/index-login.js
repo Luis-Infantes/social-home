@@ -72,42 +72,42 @@ formLogin.addEventListener('submit', function(event) {
     if (u === 'Santiago' && p === '123456') {
     
             localStorage.setItem('usuario', u);
-            window.location.href = 'perfil1.html';     
+            window.location.href = 'html/perfil1.html';     
 
     } 
     
     if (u === 'Marisa' && p === '123456') {
     
             localStorage.setItem('usuario', u);
-            window.location.href = 'perfil2.html';     
+            window.location.href = 'html/perfil2.html';     
 
     } 
     
     if (u === 'Marla' && p === '123456') {
     
             localStorage.setItem('usuario', u);
-            window.location.href = 'perfil3.html';     
+            window.location.href = 'html/perfil3.html';     
 
     } 
     
     if (u === 'Antonio' && p === '123456') {
     
             localStorage.setItem('usuario', u);
-            window.location.href = 'perfil4.html';     
+            window.location.href = 'html/perfil4.html';     
 
     } 
     
     if (u === 'Enrique' && p === '123456') {
     
             localStorage.setItem('usuario', u);
-            window.location.href = 'perfil5.html';     
+            window.location.href = 'html/perfil5.html';     
 
     } 
     
     if (u=== 'Amparo' && p === '123456') {
     
             localStorage.setItem('usuario', u);
-            window.location.href = 'perfil6.html';     
+            window.location.href = 'html/perfil6.html';     
 
     } else {
 

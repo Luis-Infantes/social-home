@@ -177,7 +177,7 @@ userInfo.appendChild(moodContainer);
 
 const returnLogin = document.getElementById('return-login').onclick = function () {
 
-    window.location.href = 'index.html';
+    window.location.href = '../index.html';
 };
 
 
