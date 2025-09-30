@@ -99,6 +99,12 @@ color: #87f0e2;
 
 }
 
+.mood-tittle {
+
+  color: #064b2e;
+}
+
+
 .mood-input {
 
 all: unset;  
@@ -115,7 +121,7 @@ padding: 8px;
   cursor: pointer;
   display: block;
   opacity: 50%;
-  margin-top: -10px;
+  margin-top: -5px;
   border: 1px solid #064b2e;
   border-radius: 15px;
   padding: 5px;
@@ -152,6 +158,12 @@ color: #87f0e2;
 
 }
 
+.work-tittle {
+
+  color: #064b2e;
+}
+
+
 .work-input {
 
 all: unset;  
@@ -169,7 +181,7 @@ margin-bottom: 10px;
   cursor: pointer;
   display: block;
   opacity: 50%;
-  margin-top: -10px;
+  margin-top: -5px;
   border: 1px solid #064b2e;
   border-radius: 15px;
   padding: 5px;
@@ -231,6 +243,7 @@ margin-bottom: 10px;
   border-radius: 6px;
   cursor: pointer;
   opacity: 75%;
+  margin-top: 10px;
 }
 
 

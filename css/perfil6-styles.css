@@ -97,6 +97,11 @@ color: #eca2bb;
 
 }
 
+.mood-tittle {
+
+  color: #690929;
+}
+
 .mood-input {
 
 all: unset;  
@@ -149,6 +154,11 @@ background-color: #690929;
 color: #eca2bb;
 
 
+}
+
+.work-tittle {
+
+  color: #690929;
 }
 
 .work-input {
@@ -229,6 +239,7 @@ margin-bottom: 10px;
   border-radius: 6px;
   cursor: pointer;
   opacity: 75%;
+  margin-top: 10px;
 }
 
 

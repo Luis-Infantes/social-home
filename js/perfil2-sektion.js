@@ -30,7 +30,7 @@ const userName = 'Marisa Pilar';
 const property = '2º A';
 const email = 'MariPi@contact.es';
 const tlfNumber = '222 22 22 22';
-const userWork = 'Activo';
+
 
 
 
@@ -40,7 +40,7 @@ personalDates.content('Nombre', userName);
 personalDates.content('Piso', property);
 personalDates.content('email', email);
 personalDates.content('Tlf', tlfNumber);
-personalDates.content('Situación laboral', userWork);
+
 
 const userInfo = document.getElementById('user-info');
 
@@ -50,6 +50,14 @@ const userInfo = document.getElementById('user-info');
 
 const workContainer = document.createElement('div');
 workContainer.className = 'work-container';
+
+//título de laboral actual
+
+const workTittle = document.createElement('h3');
+workTittle.textContent = 'Situación Laboral';
+workTittle.className = 'work-tittle';
+
+workContainer.appendChild(workTittle);
 
 
 // Crear situación laboral actual
@@ -121,6 +129,12 @@ userInfo.appendChild(workContainer);
 // Crear contenedor
 const moodContainer = document.createElement('div');
 moodContainer.className = 'mood-container';
+
+//Título de estado de ánimo
+const moodTittle = document.createElement('h3');
+moodTittle.textContent = 'Estado de ánimo';
+moodTittle.className = 'mood-tittle';
+workContainer.appendChild(moodTittle);
 
 // Crear párrafo con estado de ánimo
 const mood = document.createElement('p');
@@ -475,7 +489,7 @@ function cargarMensajes() {
 
         if (msg.usuario === 'Santiago') {
 
-            div.classList.add('mensaje-Santiago');
+            div.classList.add('message-Santiago');
 
 
             // Botón de like solo para mensajes de otros usuarios

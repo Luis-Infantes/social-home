@@ -51,6 +51,13 @@ const userInfo = document.getElementById('user-info');
 const workContainer = document.createElement('div');
 workContainer.className = 'work-container';
 
+//título de situación laboral actual
+
+const workTittle = document.createElement('h3');
+workTittle.textContent = 'Situación Laboral';
+workTittle.className = 'work-tittle';
+workContainer.appendChild(workTittle);
+
 
 // Crear situación laboral actual
 
@@ -120,6 +127,12 @@ userInfo.appendChild(workContainer);
 // Crear contenedor
 const moodContainer = document.createElement('div');
 moodContainer.className = 'mood-container';
+
+//Título de estado de ánimo
+const moodTittle = document.createElement('h3');
+moodTittle.textContent = 'Estado de ánimo';
+moodTittle.className = 'mood-tittle';
+workContainer.appendChild(moodTittle);
 
 // Crear párrafo con estado de ánimo
 const mood = document.createElement('p');

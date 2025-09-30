@@ -35,7 +35,7 @@ const userName = 'Santiago Torres';
 const property = '1º A';
 const email = 'SantiThor@contact.es';
 const tlfNumber = '111 11 11 11';
-const userWork = '';
+
 
 
 
@@ -45,7 +45,7 @@ personalDates.content('Nombre', userName);
 personalDates.content('Piso', property);
 personalDates.content('email', email);
 personalDates.content('Tlf', tlfNumber);
-personalDates.content('Situación laboral', userWork);
+
 
 
 const userInfo = document.getElementById('user-info');
@@ -56,6 +56,14 @@ const userInfo = document.getElementById('user-info');
 
 const workContainer = document.createElement('div');
 workContainer.className = 'work-container';
+
+//título de laboral actual
+
+const workTittle = document.createElement('h3');
+workTittle.textContent = 'Situación Laboral';
+workTittle.className = 'work-tittle';
+
+workContainer.appendChild(workTittle);
 
 
 // Crear situación laboral actual
@@ -128,6 +136,13 @@ userInfo.appendChild(workContainer);
 // Crear contenedor
 const moodContainer = document.createElement('div');
 moodContainer.className = 'mood-container';
+
+//Título de estado de ánimo
+const moodTittle = document.createElement('h3');
+moodTittle.textContent = 'Estado de ánimo';
+moodTittle.className = 'mood-tittle';
+
+workContainer.appendChild(moodTittle);
 
 // Crear párrafo con estado de ánimo
 const mood = document.createElement('p');
